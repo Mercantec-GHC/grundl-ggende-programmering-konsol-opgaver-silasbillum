@@ -39,25 +39,83 @@ int total = roll1 + roll2 + roll3;
 
 Console.WriteLine($"Dice roll: {roll1} + {roll2} + {roll3} = {total}");
 
-if ( total > 14)
+if ((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
 {
-    Console.WriteLine("You Win!!!!!!!!");
+    if ((roll1 == roll2) && (roll2 == roll3))
+    {
+        Console.WriteLine("You rolled triples!  +6 bonus to total!");
+        total += 6;
+    }
+    else
+    {
+        Console.WriteLine("You rolled doubles!  +2 bonus to total!");
+        total += 2;
+    }
+}
+
+
+
+if (total >= 16)
+{
+    Console.WriteLine("You won a car");
 
 }
-if (total <=15)
+ else if (total >= 10)
 {
-    Console.WriteLine("You F##ing Loser!!!!!");
+    Console.WriteLine("New laptop");
+}
+ else if (total >= 7)
+ {
+    Console.WriteLine("Won a trip");
+ }
+*/
+/*
+Random random = new Random();
+int daysUntilExpiration = random.Next(12);
+int discountPercantage = 0;
 
-}
-if((roll1 == roll2) || (roll2 == roll3) || (roll1 == roll3))
+if(daysUntilExpiration == 0)
 {
-    Console.WriteLine("You rolled doubles +2");
-    total += 2;
+    Console.WriteLine("Your subscription has expired.");
 }
-if ((roll1 == roll2) && (roll2 == roll3))
+else if (daysUntilExpiration ==1)
 {
-    Console.WriteLine("you rolled triples +6");
+    
+    Console.WriteLine($"Your subscription expires within a day!");
+    discountPercantage=20;
 }
+else if (daysUntilExpiration <=5)
+{
+    Console.WriteLine($"Your subscription expires in {daysUntilExpiration} days.");
+    discountPercantage = 10;
+}
+else if (daysUntilExpiration <=10)
+{
+    Console.WriteLine("Your subscription will expire soon. Renew now!");
+}
+if (discountPercantage > 0)
+{
+    Console.WriteLine($"Renew now and save {discountPercantage}%.");
+}
+*/
+/*
+string [] fraudulentOrderIDs = new string[3];
+fraudulentOrderIDs[0] = "A123";
+fraudulentOrderIDs[1] = "B456";
+fraudulentOrderIDs[2] = "C789";
+//fraudulentOrderIDs[3] = "D000";
+*/
+/*
+string[] fraudulentOrderIDs = { "A123", "B456", "C789" };
+Console.WriteLine($"First: {fraudulentOrderIDs[0]}");
+Console.WriteLine($"Second: {fraudulentOrderIDs[1]}");
+Console.WriteLine($"Third: {fraudulentOrderIDs[2]}");
+
+fraudulentOrderIDs[0] = "F000";
+
+Console.WriteLine($"Reassign First: {fraudulentOrderIDs[0]}");
+
+Console.WriteLine($"There are {fraudulentOrderIDs.Length} fraudulent orders to process");
 */
 
 
