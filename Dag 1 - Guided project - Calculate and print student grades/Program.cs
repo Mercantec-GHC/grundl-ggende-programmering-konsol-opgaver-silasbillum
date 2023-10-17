@@ -24,3 +24,13 @@ int jeong2 = 92;
 int jeong3 = 98;
 int jeong4 = 100;
 int jeong5 = 97;
+
+Console.WriteLine("Student   Grade");
+decimal sop = sophia1+ sophia2+ sophia3+ sophia4+ sophia5;
+Console.WriteLine("Sophia    " + sop /5 + " A"  );
+decimal nic = nicolas1 + nicolas2 + nicolas3 + nicolas4 + nicolas5;
+Console.WriteLine("Nicolas   "+ nic /5 + " B");
+decimal zah = zahirah1 + zahirah2 + zahirah3 + zahirah4 + zahirah5;
+Console.WriteLine("Zahirah   "+ zah /5 + " B ");
+decimal jeo = jeong1 + jeong2 + jeong3 + jeong4 + jeong5;
+Console.WriteLine("Jeong     " + jeo/5 + " A ");

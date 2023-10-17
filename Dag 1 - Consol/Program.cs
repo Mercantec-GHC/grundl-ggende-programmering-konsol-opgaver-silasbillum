@@ -1,6 +1,7 @@
 ﻿
 //Opgave 1
 using System.Diagnostics;
+using System.Runtime.InteropServices;
 
 Console.WriteLine("Hello, World!");
 //Opgave 2
@@ -139,6 +140,115 @@ Console.WriteLine(engMessage);
 Console.Write(@$"c:\Exercise\{projectName1}\data.txt");
 Console.WriteLine(russianMessage);
 Console.Write(@$"c:\Exercise\{projectName1}\ru-RU\data.txt");
+Console.WriteLine("");
+//Exercise - Perform addition with implicit data conversion
 
+//Add two numeric values
 
+int firstNumber = 12;
+int SecondNumber = 7;
+Console.WriteLine(firstNumber + SecondNumber);
+
+//Mix data types to force implicit type conversions
+
+int widgetsSold = 7;
+Console.WriteLine(firstName + " sold " + widgetsSold + " widgets.");
+
+//Attempt a more advanced case of adding numbers and concatenating strings
+
+Console.WriteLine(firstName + " sold " + widgetsSold + 7 + " widgets.");
+
+//Add parentheses to clarify your intention to the compiler
+
+Console.WriteLine(firstName + " sold " + (widgetsSold + 7) + "widgets." );
+
+//Exercise - Perform math operations
+
+//Perform basic math operations
+
+int sum = 7 + 5;
+int difference = 7 - 5;
+int product = 7 * 5;
+int quotient = 7 / 5;
+
+Console.WriteLine("Sum: " + sum);
+Console.WriteLine("Difference: " + difference);
+Console.WriteLine("Product: " + product);
+Console.WriteLine("Quotient: " + quotient);
+
+//Add code to perform division using literal decimal data
+
+decimal decimalQuotient = 7.0m / 5;
+Console.WriteLine($"Decimal quotient: {decimalQuotient}");
+
+//Add code to perform division using literal decimal data
+
+int first = 7;
+int second = 5;
+decimal quotient1 = (decimal)first / (decimal)second;
+Console.WriteLine(quotient1);
+
+//Write code to determine the remainder after integer division
+
+Console.WriteLine($"Modulus of 200 / 5 : {200 % 5}");
+Console.WriteLine($"Modulus of 7 / 5 : {7 % 5}");
+
+//Order of operations
+
+int value1 = 3 + 4 * 5;
+int value2 = (3 + 4) * 5;
+Console.WriteLine(value1);
+Console.WriteLine(value2);
+
+//Exercise - Increment and decrement values
+
+//Increment and decrement
+
+int value3 = 0;
+value3 = value3 + 5;
+value3+=5;
+
+value3 = value3 + 1;
+value3++;
+
+//Write code to increment and decrement a value
+
+int value = 1;
+
+value = value + 1;
+Console.WriteLine("First increment: " + value);
+
+value += 1;
+Console.WriteLine("Second increment: " + value);
+
+value++;
+Console.WriteLine("Third increment: " + value);
+
+value = value - 1;
+Console.WriteLine("First decrement: " + value);
+
+value -= 1;
+Console.WriteLine("Second decrement: " + value);
+
+value--;
+Console.WriteLine("Third decrement: " + value);
+
+//Position the increment and decrement operators
+
+//Use the increment operator before and after the value
+
+int value4 = 1;
+value4++;
+Console.WriteLine("First: " + value4);
+Console.WriteLine($"Second: {value4++}");
+Console.WriteLine("Third: " + value4);
+Console.WriteLine("Fourth: " + (++value4));
+
+//Complete the challenge to convert Fahrenheit to Celsius
+
+//Challenge: Calculate Celsius given the current temperature in Fahrenheit
+
+int fahrenheit = 94;
+decimal Celsius = (fahrenheit - 32) * (5/9m);
+Console.WriteLine(Celsius);
 
