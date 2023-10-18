@@ -219,7 +219,7 @@ Console.WriteLine("Student\t\tGrade\n");
 Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
 */
 // initialize variables - graded assignments 
-/*
+
 int currentAssignments = 5;
 int examAssignments = 5;
 
@@ -329,4 +329,4 @@ foreach (string name in studentNames)
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t");
 
 }
-  */  
+  

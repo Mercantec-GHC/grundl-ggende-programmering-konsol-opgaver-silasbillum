@@ -132,6 +132,9 @@ Console.WriteLine($"{employeeName}, {title}");
 */
 // SKU = Stock Keeping Unit. 
 // SKU value format: <product #>-<2-letter color code>-<size code>
+/*
+using System.Drawing;
+
 string sku = "01-MN-L";
 
 string[] product = sku.Split('-');
@@ -140,44 +143,147 @@ string type = "";
 string color = "";
 string size = "";
 
-if (product[0] == "01")
+switch(product[0])
 {
+    case "01":
     type = "Sweat shirt";
-} else if (product[0] == "02")
-{
-    type = "T-Shirt";
-} else if (product[0] == "03")
-{
+    break;
+
+    case "02":
+    type = "T-shirt";
+    break;
+
+    case "03":
     type = "Sweat pants";
-}
-else
-{
-    type = "Other";
-}
+    break;
 
-if (product[1] == "BL")
+}
+switch(product[1])
 {
+    case "BL":
     color = "Black";
-} else if (product[1] == "MN")
-{
+    break;
+
+    case "MN":
     color = "Maroon";
-} else
-{
-    color = "White";
+    break;
 }
 
-if (product[2] == "S")
+switch(product[2])
 {
-    size = "Small";
-} else if (product[2] == "M")
-{
+    case "S":
+    size = "small";
+    break;
+
+    case "M":
     size = "Medium";
-} else if (product[2] == "L")
-{
+    break;
+
+    case "L":
     size = "Large";
-} else
-{
-    size = "One Size Fits All";
+    break;
 }
 
 Console.WriteLine($"Product: {size} {color} {type}");
+*/
+/*
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+    if (i == 7) break;
+}
+*/
+/*
+using System.Reflection.Metadata;
+
+string[] names = { "Ales", "Eddie", "David", "Michael"};
+for (int i = names.Length - 1; i >= 0; i--)
+{
+    Console.WriteLine(names[i]);
+}
+*/
+/*
+string[] names = { "Alex", "Eddie", "David", "Michael" };
+for (int i = 0; i < names.Length; i++)
+
+    {if (names[i] == "David") names[i] = "Sammy";}
+    
+    foreach (var name in names)
+    { Console.WriteLine(name);}
+    */
+    
+   
+    /*
+       for (int i = 1; i <= 100; i++)
+        {
+            if (i % 3 == 0 && i % 5 == 0)
+            {
+                Console.WriteLine(i + " FizzBuzz");
+            }
+            else if (i % 3 == 0)
+            {
+                Console.WriteLine(i + " Fizz");
+            }
+            else if (i % 5 == 0)
+            {
+                Console.WriteLine(i + " Buzz");
+            }
+            else
+            {
+                Console.WriteLine(i);
+            }
+        }
+        */
+/*
+        Random random = new Random();
+int current = random.Next(1, 11);
+
+do
+{
+    current = random.Next(1, 11);
+    if (current >= 8) continue;
+    Console.WriteLine(current);
+} while (current != 7);
+  */
+  /*
+  while (current >= 3)
+  {
+    Console.WriteLine(current);
+    current = random.Next(1, 11);
+
+  }  
+  Console.WriteLine($"Last number: {current}    " );
+    */
+    
+    int hero = 10;
+        int monster = 10;
+        Random random = new Random();
+
+        do
+        {
+            int hit = random.Next(1, 10);
+
+        
+            monster -= hit;
+            Console.WriteLine("Hero hits the monster for " + hit + " damage. Monster's HP: " + monster);
+
+            
+            if (monster <= 0)
+            {
+                Console.WriteLine("Hero defeats the monster!");
+                break;
+            }
+
+       
+            hit = random.Next(1, 10);
+            hero -= hit;
+            Console.WriteLine("Monster hits the hero for " + hit + " damage. Hero's HP: " + hero);
+
+            
+            if (hero <= 0)
+            {
+                Console.WriteLine("Monster defeats the hero!");
+                break;
+            }
+
+        } while (hero > 0 && monster > 0);
