@@ -327,6 +327,7 @@ foreach (string name in studentNames)
     
 
     Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t");
+    Console.ReadKey();
 
 }
   

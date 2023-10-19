@@ -283,8 +283,7 @@ do
 
         case "3":
             // Ensure animal ages and physical descriptions are complete
-            Console.WriteLine("Challenge Project - please check back soon to see progress.");
-            Console.WriteLine("Press the Enter key to continue.");
+          Console.WriteLine(animalPhysicalDescription);
             readResult = Console.ReadLine();
             break;
 
